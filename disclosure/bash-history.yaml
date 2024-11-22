@@ -1,0 +1,19 @@
+id: bash-history
+info:
+  name: Bash History Disclosure
+  author: leadlife
+  severity: high
+  tags: bash,disclosure
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/.bash_history"
+
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "db_newmdb.sql"
+          - "mysql -u"
+        condition: or
