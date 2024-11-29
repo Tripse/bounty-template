@@ -16,4 +16,12 @@ http:
         words:
           - "db_newmdb.sql"
           - "mysql -u"
+          - 'passwd'
+          - 'ssh'
+          - 'db'
+          - 'bak'
+          - 'backup'
+          - 'backupdb'
+          - 'username'
+          - 'password'
         condition: or
